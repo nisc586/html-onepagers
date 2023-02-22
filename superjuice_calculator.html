@@ -2,56 +2,64 @@
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
+        <meta viewport name="viewport" content="width=device-width">
         <title>Super Juice Calculator</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     </head>
     <body>
-        <form action="" method="post">
-            <h1>Superjuice Calculator</h1>
+        <main class="w3-container">
+            <h1 class="w3-center w3-green">Superjuice Calculator</h1>
             <p>Select the kind of recipe you want, then enter the amount of peels you have.</p>
-            <fieldset>
-                <legend>Available recipes</legend>
-                <ul>
-                    <li>
-                        <input type="radio" id="lemon_sj" name="recipe" checked value="lemon"/>
-                        <label for="lemon_sj">Lemon Superjuice</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="lime_sj" name="recipe" value="lime"/>
-                        <label for="lime_sj">Lime Superjuice</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <ul>
-                <li>
+            <form action="" method="post" class="w3-card-4 w3-padding">
+                <fieldset>
+                    <legend>Available recipes</legend>
+                    <ul class="w3-cell-row">
+                        <li class="w3-cell">
+                            <input type="radio" id="lemon_sj" name="recipe" checked value="lemon" class="w3-radio"/>
+                            <label for="lemon_sj">Lemon Superjuice</label>
+                        </li>
+                        <li class="w3-cell">
+                            <input type="radio" id="lime_sj" name="recipe" value="lime" class="w3-radio"/>
+                            <label for="lime_sj">Lime Superjuice</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <p>
                     <label for="peels">Amount of <span class="lemon_or_lime">lemon</span> peels:</label>
                     <input type="number" id="user_input" name="peels" min="0" max="1000" step="0.1" value="50" placeholder="50"/>
                     g
-                </li>
-                <li class="button">
-                    <button type="submit">Calculate recipe</button>
-                </li>
-            </ul>
-        </form>
-        <h2>Ingredients</h2>
-        <p id="ingredients">
-            <ul>
-                <li><span id="amount_peels">50</span> g <span class="lemon_or_lime">lemon</span> peels</li>
-                <li><span id="amount_citric">50</span> g citric acid</li>
-                <li id="li_malic" hidden><span id="amount_malic">0</span> g malic acid</li>
-                <li><span id="amount_water">833</span> g water</li>
-                <li><span class="lemon_or_lime">lemon</span> juice of the peeled <span class="lemon_or_lime">lemon</span>s</li>
-            </ul>
-        </p>
-        <h2>Directions</h2>
-        <p>
-            Peel your <span class="lemon_or_lime">lemon</span>s. Weigh out the amount of peels you get and enter the amount above.<br>
-            Then, cover the peels with the acid, stir so everything is well mixed, and cover for one hour.
-            After an hour, the citrus peels should have released their oils. Now it is time to add the water, and blend everything together.<br>
-            Add the citrus juice into the mix and strain the whole thing through a filter.
-            Fill the mixture into small bottles or airtight containers.<br>
-            Keep the superjuice refrigerated, or freeze it.
-        </p>
-            
+                </p>
+                <p>
+                    <button class="w3-btn w3-green" type="submit">Calculate recipe</button>
+                </p>
+            </form>
+    
+            <div class="w3-center">
+                <h2>Ingredients</h2>
+                <ul class="w3-ul">
+                    <li><span id="amount_peels">50</span> g <span class="lemon_or_lime">lemon</span> peels</li>
+                    <li><span id="amount_citric">50</span> g citric acid</li>
+                    <li id="li_malic" hidden><span id="amount_malic">0</span> g malic acid</li>
+                    <li><span id="amount_water">833</span> g water</li>
+                    <li><span class="lemon_or_lime">lemon</span> juice of the peeled <span class="lemon_or_lime">lemon</span>s</li>
+                </ul>
+                <h2>Directions</h2>
+                <ol class="w3-left-align">
+                    <li>Peel your <span class="lemon_or_lime">lemon</span>s. Weigh out the amount of peels you get and enter the amount above.</li>
+                    <li>
+                        Then, cover the peels with the acid, stir so everything is well mixed, and cover for one hour.
+                        After an hour, the citrus peels should have released their oils. Now it is time to add the water, and blend everything together.
+                    </li>
+                    <li>
+                        Add the citrus juice into the mix and strain the whole thing through a filter.
+                        Fill the mixture into small bottles or airtight containers.
+                    </li>
+                    <li>Keep the superjuice refrigerated, or freeze it.</li>
+                </ol>
+            </div>
+        </main>
+        
+
         <script>
             const form = document.querySelector("form");
 
