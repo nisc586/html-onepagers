@@ -1,0 +1,58 @@
+.avatar {
+  max-width: 150px;
+  aspect-ratio: 1/1;
+}
+
+body {
+  margin: 2%;
+}
+
+@media (min-width: 500px) {
+    #generator-container {
+      display: grid;
+      grid-template-columns: minmax(auto, 200px) 1fr auto;
+      grid-template-areas:
+      "image textarea textarea"
+      ". . button";
+      margin: 2em;
+    }
+
+    #media-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .media-element {
+      display: grid;
+      grid-template-columns: minmax(auto, 150px) 1fr;
+      grid-template-rows: 1fr auto;
+      grid-template-areas:
+        "image content"
+        "image footer";
+      grid-gap: 0 1em;
+      margin-bottom: 1em;
+      border: 2px solid black;
+    }
+
+    .img {
+        grid-area: image;
+    }
+  
+    .content {
+      grid-area: content;
+    }
+  
+    footer {
+      grid-area: footer;
+    }
+
+    button {
+      grid-area: button;
+    }
+  
+    textarea {
+      grid-area: textarea;
+      resize: none;
+    }
+
+  }
