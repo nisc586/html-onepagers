@@ -14,7 +14,7 @@ function sendMessage() {
 
     let img = document.createElement("img");
     img.classList.add("avatar");
-    img.setAttribute("src", "..\\images\\basic-shape-avatar-1632968.jpg")
+    img.setAttribute("src", ".\\images\\basic-shape-avatar-1632968.jpg")
 
     let p = document.createElement("p");
     p.innerHTML = messageText.value;
